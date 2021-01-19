@@ -1,14 +1,17 @@
+//finds the previously inputted value
 function getHistory() {
     return document.getElementById("history-value").innerText;
 
 }
+//prints history
 function printHistory(num){
     document.getElementById("history-value").innerText = num;
 }
-
+//getter method for output
 function getOutput(){
     return document.getElementById("output-value").innerText;
 }
+//prints values for numbers
 function printOutput(num){
     var numString = num.toString();
 
@@ -42,12 +45,12 @@ function printOutput(num){
 
 
 
-
+//renders necessary elements/js
 window.onload = function(){
     renderFunctionality();  
 };
 
-
+//takes an integer, outputs a string representation
 function getFormattedNumber(num){
     if (num == "-"){
         return "";
@@ -65,12 +68,13 @@ function getFormattedNumber(num){
     var value = n.toLocaleString("en");
     return value;
 }
+//reverses the format, returning the number
 function reverseNumberFormat(num){
     var numString = num.toString();
 
     return Number(num.replace(/,/g, ''));
 }
-
+//swaps style sheets dependant on current layout
 function swapStyleSheet(element){
     var header = document.getElementsByTagName('head')[0];
     if (element.getAttribute("href").localeCompare("style.css") == 0){
@@ -146,7 +150,8 @@ function swapStyleSheet(element){
 
     }
 }
-
+//refreshes all event listeners so the functionality of each mapped
+//button may change
 function refreshListeners(){
     var number = document.getElementsByClassName("number");
 
@@ -163,17 +168,15 @@ function refreshListeners(){
     }
 
 }
-
+//toggles a different style sheet
 var changeStyle = document.getElementById("tog");
 changeStyle.addEventListener('click', function(){
 
     swapStyleSheet(document.getElementById("style"));
+});
 
-
-}
-                            )
-
-
+//called when an operator button is clicked
+//takes different buttons into account
 var opFunc = function(){
     if (this.id == "clear"){
         printHistory("");
@@ -231,7 +234,7 @@ var opFunc = function(){
         }
     }
 }
-
+//function to be called when a number is clicked
 var numFunc = function(){
 
     if (getOutput().length >= 8){
@@ -264,14 +267,12 @@ var numFunc = function(){
         printOutput(output);
     }
 }
+//adds button functionality
 function renderFunctionality(){
     var operator = document.getElementsByClassName("operator");
     for(var i = 0; i < operator.length; i++){
         operator[i].addEventListener('click', opFunc);
-
-
-    }
-
+}
     var number = document.getElementsByClassName("number");
 
     for(var i = 0; i < number.length; i++){
