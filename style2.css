@@ -1,0 +1,102 @@
+body{
+    font-family: 'Open sans', sans-serif;
+    background-color: black;
+}
+#container{
+    width: 408px;
+    height: 461px;
+    display: block;
+    background-image: url(background2alt.jpg);
+    margin: 100px auto;
+}
+#calculator{
+    width: 320px;
+    height: 520px;
+    
+    margin: 0 auto;
+    top: 0px;
+    position: relative;
+   
+    
+}
+#result{
+    margin: 25px;
+    height: 75px;
+    transform: rotate(-12.5deg);
+    width: 175px;
+    position: absolute;
+    right: 70px;
+    color: white !important;
+    
+}
+
+#history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: white !important;
+    
+}
+#output{
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+#keyboard{
+    height: 400px;
+    width: 250px;
+    transform: rotate(-12.8deg) scale(.7); 
+    position: absolute;
+    top: 73px;
+    left: 73px !important;
+    
+    
+}
+#tog{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-image: url(background2.jpg);
+    box-shadow: 0 4px 8px 0;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    
+    
+}
+#togglebutton{
+    position: relative;
+    
+}
+.operator{
+    background-color: transparent;
+    color: white !important;
+    
+}
+.operator, .number, .empty{
+    width: 45px;
+    height: 45px;
+    margin: 4.5px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight:bold;
+    font-size: 15px !important;
+    
+}
+.number, .empty{
+    color: transparent;
+    background-color: transparent !important;
+    
+}
+
+.number, .operator{
+    color: transparent !important;
+    cursor: pointer;
+}
+
+
